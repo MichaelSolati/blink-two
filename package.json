@@ -1,0 +1,46 @@
+{
+  "name": "blink-two",
+  "description": "A second attempt at the HTML Blink Element (<blink>). A non-standard element which causes the enclosed text to flash slowly.",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c",
+    "serve": "polymer serve --open"
+  },
+  "main": "dist/index.js",
+  "author": "Michael Solati mkslt04@gmail.com",
+  "homepage": "https://github.com/MichaelSolati/blink-two",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelSolati/blink-two.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelSolati/blink-two/issues"
+  },
+  "readme": "README.md",
+  "license": "MIT",
+  "keywords": [
+    "blink",
+    "blink tag",
+    "custom element"
+  ],
+  "files": [
+    "dist/**",
+    "LICENSE.md",
+    "package-lock.json",
+    "package.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "wct-mocha": "^1.0.0"
+  }
+}
