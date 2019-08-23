@@ -3,11 +3,14 @@
   "description": "A second attempt at the HTML Blink Element (<blink>). A non-standard element which causes the enclosed text to flash slowly.",
   "version": "1.0.0",
   "scripts": {
-    "build": "rm -rf ./dist && rollup -c",
-    "serve": "polymer serve --open"
+    "build": "rm -rf dist && rollup -c --environment PROD",
+    "watch": "rollup -c --watch --environment WATCH"
   },
-  "main": "dist/index.js",
-  "author": "Michael Solati mkslt04@gmail.com",
+  "main": "index.cjs.js",
+  "browser": "blink-two.js",
+  "module": "index.esm.js",
+  "typings": "index.d.ts",
+  "author": "Michael Solati <mkslt04@gmail.com>",
   "homepage": "https://github.com/MichaelSolati/blink-two",
   "repository": {
     "type": "git",
@@ -21,26 +24,36 @@
   "keywords": [
     "blink",
     "blink tag",
-    "custom element"
+    "components",
+    "elements",
+    "web components",
+    "custom elements"
   ],
   "files": [
-    "dist/**",
+    "blink-two.js",
+    "index.cjs.js",
+    "index.d.ts",
+    "index.esm.js",
     "LICENSE.md",
-    "package-lock.json",
     "package.json",
+    "package-lock.json",
     "README.md"
   ],
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "lit-element": "^2.2.1"
+  },
   "devDependencies": {
-    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
-    "@polymer/polymer": "^3.0.0",
-    "@polymer/test-fixture": "^4.0.2",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "rollup": "^1.1.2",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-terser": "^4.0.4",
-    "wct-mocha": "^1.0.0"
+    "rollup": "1.x.x",
+    "rollup-plugin-commonjs": "10.x.x",
+    "rollup-plugin-copier": "1.x.x",
+    "rollup-plugin-livereload": "1.x.x",
+    "rollup-plugin-node-resolve": "5.x.x",
+    "rollup-plugin-scss": "1.x.x",
+    "rollup-plugin-serve": "1.x.x",
+    "rollup-plugin-terser": "5.x.x",
+    "rollup-plugin-typescript2": "0.x.x",
+    "tslint": "5.x.x",
+    "typescript": "3.x.x"
   }
 }

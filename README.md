@@ -15,7 +15,7 @@ npm install blink-two
 CDN:
 
 ```HTML
-<script src="https://unpkg.com/blink-two@1.0.0/dist/index.js"></script>
+<script src="https://unpkg.com/blink-two/blink-two.js"></script>
 ```
 
 If you do use this library from NPM be sure to import it somewhere in your JS code:
