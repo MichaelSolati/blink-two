@@ -1,7 +1,7 @@
 {
   "name": "blink-two",
   "description": "A second attempt at the HTML Blink Element (<blink>). A non-standard element which causes the enclosed text to flash slowly.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "build": "rm -rf dist && rollup -c --environment PROD",
     "watch": "rollup -c --watch --environment WATCH",
