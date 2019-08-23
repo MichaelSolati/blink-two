@@ -33,6 +33,7 @@ if (process.env.PROD === 'true') {
       ...plugins,
       copier({
         items: [
+          { src: 'CHANGELOG.md', dest: 'dist/CHANGELOG.md', createPath: true },
           { src: 'LICENSE.md', dest: 'dist/LICENSE.md', createPath: true },
           { src: 'package-lock.json', dest: 'dist/package-lock.json', createPath: true },
           { src: 'README.md', dest: 'dist/README.md', createPath: true }

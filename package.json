@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rm -rf dist && rollup -c --environment PROD",
-    "watch": "rollup -c --watch --environment WATCH"
+    "watch": "rollup -c --watch --environment WATCH",
+    "release:major": "changelog -M && git add . && git commit -m 'chore(release): major version release' && npm version major",
+    "release:minor": "changelog -m && git add . && git commit -m 'chore(release): minor version release' && npm version minor",
+    "release:patch": "changelog -p && git add . && git commit -m 'chore(release): patch version release' && npm version patch"
   },
   "main": "index.cjs.js",
   "browser": "blink-two.js",
@@ -31,6 +34,7 @@
   ],
   "files": [
     "blink-two.js",
+    "CHANGELOG.md",
     "index.cjs.js",
     "index.d.ts",
     "index.esm.js",
@@ -44,6 +48,7 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "generate-changelog": "1.x.x",
     "rollup": "1.x.x",
     "rollup-plugin-commonjs": "10.x.x",
     "rollup-plugin-copier": "1.x.x",
